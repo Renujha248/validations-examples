@@ -25,6 +25,7 @@ import Practice from './components/Practice-react';
 import Active from './components/Active';
 import Homepage from './components/Homepage';
 import RichTextEditor from './components/RichTextEditor';
+import { NumberCount } from './components/NumberCount';
 
 
 export default function App() {
@@ -54,11 +55,9 @@ export default function App() {
               <Route path="/tableof8" element={<ForUsesForTableOf8 />} />
               <Route path="/practice" element={<Practice />} />
               <Route path="/active" element={<Active />} />
-
               {/* Homepage Routings */}
-                <Route path="/richtexteditor" element={<RichTextEditor />} />
-              
-
+              <Route path="/richtexteditor" element={<RichTextEditor />} />
+              <Route path="/numbercount" element={<NumberCount />} />
             </Routes>
           </div>
         </div>
