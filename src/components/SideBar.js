@@ -4,24 +4,49 @@ import { Link } from 'react-router-dom';
 
 
 function SideBar() {
-    useEffect(() => {
-        let menuListCount = document.getElementsByClassName('menu');
-        for (let i = 0; i < menuListCount.length; i++) {
-            menuListCount[i].addEventListener('click', function () {
-                let currentMenu = document.getElementsByClassName('active');
-                if (currentMenu.length > 0) {
-                    currentMenu[0].classList = currentMenu[0].classList.replace(' active', '');
-                }
-                this.classList += " active"
-            });
 
+    useEffect(() => {
+        let listEle = document.querySelectorAll('.menu');
+        for (let i = 0; i < listEle.length; i++) {
+            listEle[i].addEventListener('click', function () {
+                let currentEle = document.querySelectorAll('.active');
+                if(currentEle.length > 0){
+                    currentEle[0].className = currentEle[0].className.replace(' active', '');
+                }
+                this.className += ' active';
+            })
         }
     })
     return (
         <scroll>
             <div className="grid grid-cols-1 h-full justify-between bg-gray-800 text-gray-300">
                 <div className="p-4">
-                <div className="mb-4">
+                    <div className="mb-4">
+                        <div className="flex w-full items-center justify-between">
+                            <a className="menu flex w-full cursor-pointer items-center rounded-lg px-4 py-2 transition duration-300 ease-in-out hover:bg-black hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-job-fill" viewBox="0 0 16 16">
+                                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                                </svg>
+                                <span className="ml-3 font-bold">
+                                    <Link to="/homepage">Homepage</Link>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div className="mb-4">
+                        <div className="flex w-full items-center justify-between">
+                            <a className="menu flex w-full cursor-pointer items-center rounded-lg px-4 py-2 transition duration-300 ease-in-out hover:bg-black hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-job-fill" viewBox="0 0 16 16">
+                                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                                </svg>
+                                <span className="ml-3 font-bold">
+                                    <Link to="/active">Active</Link>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="mb-4">
                         <div className="flex w-full items-center justify-between">
                             <a className="menu flex w-full cursor-pointer items-center rounded-lg px-4 py-2 transition duration-300 ease-in-out hover:bg-black hover:text-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-job-fill" viewBox="0 0 16 16">

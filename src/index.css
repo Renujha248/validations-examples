@@ -15,5 +15,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+button{border:1px solid #000;border-radius:5px;padding: 0 10px}
 .multiSelectContainer{margin:0;width:auto}
 .multi-select form{padding:20px}

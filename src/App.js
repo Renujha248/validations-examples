@@ -22,6 +22,9 @@ import FormValidation from './components/FormValidation';
 import ReactTableDataFetch from './components/ReactTableDataFetch';
 import ForUsesForTableOf8 from './components/ForUsesForTableOf8';
 import Practice from './components/Practice-react';
+import Active from './components/Active';
+import Homepage from './components/Homepage';
+import RichTextEditor from './components/RichTextEditor';
 
 
 export default function App() {
@@ -34,6 +37,8 @@ export default function App() {
           <div className='sidebar'><SideBar /></div>
           <div className='maincontent p-4'>
             <Routes>
+              <Route path="/" element={<Homepage />} />
+              <Route path="/homepage" element={<Homepage />} />
               <Route path="/dashbord" element={<Dashbord />} />
               <Route path="/inputbox" element={<InputBox />} />
               <Route path="/dynamicaddlisting" element={<DynamicAddListing />} />
@@ -48,6 +53,11 @@ export default function App() {
               <Route path="/reacttabledatafetch" element={<ReactTableDataFetch />} />
               <Route path="/tableof8" element={<ForUsesForTableOf8 />} />
               <Route path="/practice" element={<Practice />} />
+              <Route path="/active" element={<Active />} />
+
+              {/* Homepage Routings */}
+                <Route path="/richtexteditor" element={<RichTextEditor />} />
+              
 
             </Routes>
           </div>
